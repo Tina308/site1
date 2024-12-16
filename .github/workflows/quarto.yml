@@ -16,13 +16,16 @@ jobs:
       - name: Setup R
         uses: r-lib/actions/setup-r@v2
         with:
-          r-version: '4.4.2'  # Choisissez la version appropriée
+          r-version: '4.4.2'  # Choisissez la version appropriée de R
 
       - name: Install required R packages
         run: |
           R -e "install.packages('knitr')"
           R -e "install.packages('rmarkdown')"
-          R -e "install.packages('dplyr')"  # Ajoutez dplyr ici
+          R -e "install.packages('dplyr')"  # Ajoutez d'autres packages si nécessaire
+          R -e "install.packages('ggplot2')"  # Ajout de ggplot2
+          R -e "install.packages('tidyr')"  # Ajout de tidyr
+          # Ajoutez d'autres packages nécessaires ici
 
       - name: Setup Quarto
         uses: quarto-dev/quarto-actions/setup@v2
