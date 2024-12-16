@@ -22,7 +22,8 @@ jobs:
         run: |
           R -e "install.packages('knitr')"
           R -e "install.packages('rmarkdown')"
-      
+          R -e "install.packages('dplyr')"  # Ajoutez dplyr ici
+
       - name: Setup Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
